@@ -119,13 +119,16 @@ def lcm(a,b):
 #String function
 def words_count(arr):
     '''This function  returns the dictionary of words with its count
-        input: array of strings
+        input: String
         output: dictionary of keys = word, value = count of that word'''
     dict = {}
-    for i in arr:
+    list = []
+    list.append(arr)
+    for i in list:
         for j in i.split():
             dict[j] = dict.get(j,0) + 1
     return dict
+
 
 
 
