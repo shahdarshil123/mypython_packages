@@ -97,6 +97,25 @@ def prime_factors(n):
         list.append(n)
     return list
 
+# LCM and HCF
+def hcf(a,b):
+    '''This function calculates the highest common factor from the two values
+        input:
+        int -> num1, int-> num2
+        output: int -> highest commom factor of the two values'''
+    # We will use recursion to find the value
+    if(b==0):       # Base Condition
+        return a
+    return hcf(b,a%b)
+
+def lcm(a,b):
+    '''This fucntion calculates the lowest common multiple of the two numbers
+        input:
+        int -> num1, int-> num2
+        output: int -> highest commom factor of the two values'''
+    calc_hcf = hcf(a,b)             # Calculate the hcf
+    return(int((a*b)/calc_hcf))     # LCM = (n1 x n2)/hcf
+
 #String function
 def words_count(arr):
     '''This function  returns the dictionary of words with its count
